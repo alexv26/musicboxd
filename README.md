@@ -1,20 +1,13 @@
-<<<<<<< HEAD
+# Musicboxd
 
-# musicboxd
+Welcome to Musicboxd, the site designed to empower music lovers to share their love of music with others. With this app, users can leave reviews on their favorite albums, create lists of albums, catalogue their music journey, and much more. This website is a work in progress.
 
-=======
+# Running
 
-# React + Vite
+To run, follow these steps:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-> > > > > > > 320f274 (First commit)
+1. Navigate to the home directory
+2. Create a .env file containing a `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET`, which can be optained via [Spotify's developer site](https://developer.spotify.com/dashboard).
+3. Run `$ npm i` to install dependencies.
+4. Run `$ npm run dev` to start a localhost of the website
+5. Run `$ node src/server/SpotifyApiServer.cjs` to generate Spotify access tokens.
