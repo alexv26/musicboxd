@@ -80,13 +80,14 @@ function TopNavbar() {
               >
                 Login
               </a>
-              <button
+              <a
                 data-mdb-ripple-init=""
                 type="button"
                 className="btn btn-primary me-3"
+                href="/signup"
               >
                 Sign up for free
-              </button>
+              </a>
               <img
                 src="https://www.bc.edu/content/bc-web/offices/rec/outdoor-adventures/Current-Trip-Leaders/Alex-Velsmid/_jcr_content/profileImage.img.jpg/1740163378628.jpg"
                 className="rounded-circle"

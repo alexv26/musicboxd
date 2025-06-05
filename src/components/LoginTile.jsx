@@ -10,7 +10,7 @@ function LoginTile() {
         <div className="shape" />
       </div>
       <form>
-        <h3>Login Here</h3>
+        <h3>Sign in</h3>
         <label htmlFor="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username" />
         <label htmlFor="password">Password</label>
@@ -18,7 +18,7 @@ function LoginTile() {
         <button>Log In</button>
         <div className="sign-up">
           <p>Don't have an account?</p>
-          <a href="/">Sign up</a>
+          <a href="/signup">Sign up</a>
         </div>
       </form>
     </div>

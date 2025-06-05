@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-.login-tile body {
-  background-color: #080710;
-}
-
 .login-tile .background {
   width: 430px;
   height: 520px;
