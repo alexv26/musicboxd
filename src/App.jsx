@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/album/:artistName/:albumName" element={<AlbumInfo />} />
+        <Route path="/album/:albumId" element={<AlbumInfo />} />
         <Route path="/searchresults" element={<SearchResultsPage />} />
       </Routes>
     </>

@@ -43,13 +43,7 @@ function Recommendations() {
       </p>
       <div className="album-grid d-flex flex-wrap justify-content-center">
         {recommendedAlbums.map((album, index) => (
-          <AlbumTile
-            key={index}
-            coverUrl={album.coverUrl}
-            albumName={album.albumName}
-            artistName={album.artistName}
-            rating={album.rating}
-          />
+          <AlbumTile key={album.id || index} album={album} />
         ))}
       </div>
     </div>

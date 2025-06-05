@@ -78,6 +78,7 @@ export async function fetchAlbumDetails(albumId) {
     artistName: albumData.artists[0].name,
     releaseDate: albumData.release_date,
     tracks: albumData.tracks.items.map((track) => track.name),
+    id: albumData.id,
     rating: Math.floor(Math.random() * 5) + 1, // Optional: temporary rating
   };
 }

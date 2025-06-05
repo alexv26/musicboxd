@@ -1,14 +1,15 @@
 import "./component_styles/AlbumTile.css";
 import { Link } from "react-router-dom";
 
-function AlbumTile({ coverUrl, albumName, artistName, rating }) {
+function AlbumTile({ album }) {
+  const { coverUrl, albumName, artistName, rating, id } = album;
   return (
     <div
       className="album-tile card text-light"
       style={{ backgroundColor: "#121212" }}
     >
       <Link
-        to={`/album/${artistName}/${albumName}`}
+        to={`/album/${id}`}
         style={{ textDecoration: "none", color: "white" }}
       >
         <img

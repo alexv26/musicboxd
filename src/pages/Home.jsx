@@ -1,4 +1,4 @@
-import TopNavbar from "../components/TopNavBar";
+import TopNavbar from "../components/TopNavbar.jsx";
 import SearchBar from "../components/SearchBar";
 import Hero from "../components/Hero";
 import Reccomendations from "../components/RecommendedAlbumsHome";

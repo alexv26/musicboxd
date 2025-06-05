@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import AlbumTile from "../components/AlbumTile";
 import { fetchAlbumsFromSpotify } from "../service/SpotifyService.cjs";
-import TopNavbar from "../components/TopNavBar";
+import TopNavbar from "../components/TopNavbar.jsx";
 
 function SearchResultsPage() {
   const location = useLocation();
@@ -66,16 +66,20 @@ function SearchResultsPage() {
 
           <div className="album-grid d-flex flex-wrap justify-content-center">
             {albums.map((album, index) => (
-              <AlbumTile
-                key={album.id || index}
-                coverUrl={album.coverUrl}
-                albumName={album.albumName}
-                artistName={album.artistName}
-                rating={album.rating} // optional fake rating already added during fetch
-              />
+              <AlbumTile key={album.id || index} album={album} />
             ))}
           </div>
         </div>
+        <Link
+          to="/"
+          className="btn btn-secondary mb-4"
+          style={{
+            marginLeft: "40px",
+            marginTop: "-40px",
+          }}
+        >
+          ← Back to Home
+        </Link>
       </div>
     </>
   );
