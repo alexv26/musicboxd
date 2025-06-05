@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function AlbumTile({ coverUrl, albumName, artistName, rating }) {
   return (
-    <div className="album-tile card text-light bg-dark">
+    <div
+      className="album-tile card text-light"
+      style={{ backgroundColor: "#121212" }}
+    >
       <Link
         to={`/album/${artistName}/${albumName}`}
         style={{ textDecoration: "none", color: "white" }}

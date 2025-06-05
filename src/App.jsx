@@ -2,6 +2,7 @@ import { useState } from "react";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/SignUp.jsx";
+import SearchResultsPage from "./pages/SearchResultsPage.jsx";
 import AlbumInfo from "./pages/AlbumInfo.jsx";
 import { Routes, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/album/:artistName/:albumName" element={<AlbumInfo />} />
+        <Route path="/searchresults" element={<SearchResultsPage />} />
       </Routes>
     </>
   );

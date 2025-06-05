@@ -1,7 +1,7 @@
 import TopNavbar from "../components/TopNavBar";
 import SearchBar from "../components/SearchBar";
 import Hero from "../components/Hero";
-import Reccomendations from "../components/RecommendedAlbums";
+import Reccomendations from "../components/RecommendedAlbumsHome";
 
 function Home() {
   return (
