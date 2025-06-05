@@ -1,0 +1,21 @@
+.album-tile {
+  width: 200px;
+  margin: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.album-tile:hover {
+  transform: scale(1.05);
+}
+
+.album-tile img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.star-rating {
+  font-size: 1.2rem;
+}
