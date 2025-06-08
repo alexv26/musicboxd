@@ -72,14 +72,29 @@ export async function fetchAlbumDetails(albumId) {
 
   const albumData = await albumRes.json();
 
+  // Pagination: Fetch all tracks
+  let allTracks = [...albumData.tracks.items];
+  let nextUrl = albumData.tracks.next;
+
+  while (nextUrl) {
+    const nextRes = await fetch(nextUrl, {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    });
+    const nextData = await nextRes.json();
+    allTracks = allTracks.concat(nextData.items);
+    nextUrl = nextData.next;
+  }
+
   return {
     coverUrl: albumData.images[0]?.url || "",
     albumName: albumData.name,
     artistName: albumData.artists[0].name,
     releaseDate: albumData.release_date,
-    tracks: albumData.tracks.items.map((track) => track.name),
+    tracks: allTracks.map((track) => track.name),
     id: albumData.id,
-    rating: Math.floor(Math.random() * 5) + 1, // Optional: temporary rating
+    rating: Math.floor(Math.random() * 5) + 1,
   };
 }
 

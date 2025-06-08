@@ -120,6 +120,7 @@ function AlbumInfo() {
               maxHeight: "300px",
               overflowY: "auto",
               paddingRight: "10px",
+              paddingLeft: "5px",
             }}
           >
             <ol className="text-start text-light" style={{ marginBottom: 0 }}>
