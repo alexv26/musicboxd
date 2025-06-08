@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { fetchAlbumDetails } from "../service/SpotifyService.cjs";
 import TopNavbar from "../components/TopNavbar.jsx";
 
+import "./pages_styles/AlbumInfo.css";
+
 function AlbumInfo() {
   const { albumId } = useParams();
   const [album, setAlbum] = useState(null);
@@ -90,7 +92,7 @@ function AlbumInfo() {
               //marginLeft: "15%",
             }}
           />
-          <div className="text-light">
+          <div id="header-section" className="text-light">
             <h1 style={{ fontSize: "50px" }}>{album.albumName}</h1>
             <h1 style={{ fontSize: "30px" }}>{album.artistName}</h1>
             <h1 style={{ fontSize: "20px" }}>
@@ -99,31 +101,34 @@ function AlbumInfo() {
             <h1 style={{ fontSize: "20px" }}>{album.tracks.length} tracks</h1>
           </div>
         </div>
-        {/*{" "}
-      <div className="text-dark container py-5 mt-5">
-        <h2 className="mb-4">
-          {album.albumName} by {album.artistName}
-        </h2>
-
-        <img
-          src={album.coverUrl}
-          alt={`${album.albumName} cover`}
-          className="img-fluid mb-4"
-          style={{ maxWidth: "300px", borderRadius: "8px" }}
-        />
-
-        <h4>Tracklist:</h4>
-        <ol className="text-start">
-          {album.tracks.map((track, index) => (
-            <li key={index}>{track}</li>
-          ))}
-        </ol>
-
-        <Link to="/" className="btn btn-secondary mt-4">
-          ← Back to Home
-        </Link>
-      </div>{" "}
-      */}
+        <div
+          id="tracklist-section"
+          style={{
+            padding: "20px",
+            backgroundColor: "#121212",
+            marginTop: "20px",
+            borderRadius: "8px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxWidth: "1100px",
+          }}
+        >
+          <h2 className="text-light">Tracklist:</h2>
+          <div
+            id="tracklist-scroll"
+            style={{
+              maxHeight: "300px",
+              overflowY: "auto",
+              paddingRight: "10px",
+            }}
+          >
+            <ol className="text-start text-light" style={{ marginBottom: 0 }}>
+              {album.tracks.map((track, index) => (
+                <li key={index}>{track}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
     </>
   );
